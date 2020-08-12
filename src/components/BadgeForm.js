@@ -1,14 +1,6 @@
 import React from "react";
 
 class BadgeForm extends React.Component {
-  state = {};
-  handleClick = (e) => {
-    console.log("Button clicked");
-  };
-
-  handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
   render() {
     return (
       <div>
@@ -20,40 +12,40 @@ class BadgeForm extends React.Component {
               type="text"
               name="firstName"
               className="form-control"
-              onChange={this.handleChange}
-              value={this.state.firstName}
+              onChange={this.props.onChange}
+              value={this.props.formValues.firstName}
             />
             <label>Last Name</label>
             <input
               type="text"
               name="lastName"
               className="form-control"
-              onChange={this.handleChange}
-              value={this.state.lastName}
+              onChange={this.props.onChange}
+              value={this.props.formValues.lastName}
             />
             <label>Email</label>
             <input
               type="email"
               name="email"
               className="form-control"
-              onChange={this.handleChange}
-              value={this.state.email}
+              onChange={this.props.onChange}
+              value={this.props.formValues.email}
             />
             <label>Job Title</label>
             <input
               type="text"
               name="jobTitle"
               className="form-control"
-              onChange={this.handleChange}
-              value={this.state.jobTitle}
+              onChange={this.props.onChange}
+              value={this.props.formValues.jobTitle}
             />
             <label>Twitter</label>
             <input
               type="text"
               name="twitter"
               className="form-control"
-              onChange={this.handleChange}
-              value={this.state.twitter}
+              onChange={this.props.onChange}
+              value={this.props.formValues.twitter}
             />
           </div>
           <button
