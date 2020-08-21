@@ -5,7 +5,7 @@ class BadgeForm extends React.Component {
     return (
       <div>
         <h1>New Attendant</h1>
-        <form>
+        <form onSubmit={this.props.onSubmit}>
           <div className="form-group">
             <label>First Name</label>
             <input
@@ -48,13 +48,7 @@ class BadgeForm extends React.Component {
               value={this.props.formValues.twitter}
             />
           </div>
-          <button
-            className="btn btn-primary"
-            onClick={this.handleClick}
-            type="button"
-          >
-            Save
-          </button>
+          <button className="btn btn-primary">Save</button>
         </form>
       </div>
     );
